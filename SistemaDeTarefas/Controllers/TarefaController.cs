@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SistemaDeTarefas.Models;
 using SistemaDeTarefas.Repositorios;
@@ -8,6 +9,7 @@ namespace SistemaDeTarefas.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TarefaController : ControllerBase
     {
         private readonly TarefaRepositorio _tarefarepositorio;
